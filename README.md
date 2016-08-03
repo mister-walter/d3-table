@@ -1,5 +1,5 @@
 # d3-table
-[![NPM version](img.shields.io/npm/v/d3-table.svg)](https://www.npmjs.com/package/d3-table)
+[![NPM version](https://img.shields.io/npm/v/d3-table.svg)](https://www.npmjs.com/package/d3-table)
 
 Create HTML tables that leverage d3 to respond to data changes by adding and removing rows as needed.
 
