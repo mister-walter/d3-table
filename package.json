@@ -1,0 +1,32 @@
+{
+  "name": "d3-table",
+  "version": "0.2.0",
+  "author": "Andrew Walter",
+  "description": "A simple d3 plugin for creating HTML tables.",
+  "keywords": [
+    "d3",
+    "d3-module"
+  ],
+  "license": "MIT",
+  "main": "build/d3-table.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/mister-walter/d3-table",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mister-walter/d3-table.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -g d3-selection:d3 -o build/d3-table.js -- index.js", 
+    "test": "tape 'test/**/*-test.js'",
+    "prepublish": "npm run test && uglifyjs build/d3-table.js -c -m -o build/d3-table.min.js",
+    "postpublish": "zip -j build/d3-table.zip -- LICENSE README.md build/d3-table.js build/d3-table.min.js"
+  },
+  "dependencies": {
+      "d3-selection": "1"
+  },
+  "devDependencies": {
+    "rollup": "0.27",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}
